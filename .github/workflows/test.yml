@@ -31,4 +31,6 @@ jobs:
             cd my-app
             npm i 
             npm run build 
+            sudo nginx -s reload
             pm2 restart app || pm2 start npm --name "app" -- run start
+            sudo nginx -s reload
