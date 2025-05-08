@@ -13,11 +13,12 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
 
-      - name: Deploy to my EC2 instance
-        uses: appleboy/scp-action@v1
+      - name: Deploy command on EC2
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: 15.207.254.154
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
-          port: 22 
-          script:whoami
+          port: 22
+          script: |
+            whoami
