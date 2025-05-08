@@ -29,8 +29,10 @@ export default function Happy() {
             </div>
 
             <p className="text-lg text-center text-black/80 max-w-md mt-6">
-                Here's to making beautiful memories, achieving your dreams, and staying true to the amazing person you are!
+                Here&apos;s to making beautiful memories, achieving your dreams, and staying true to the amazing person you are!
             </p>
+
+
 
             <footer className="text-sm text-black/60 mt-4">— With Love, From Your Friends 🎁</footer>
         </div>
