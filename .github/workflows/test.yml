@@ -34,3 +34,4 @@ jobs:
             sudo nginx -s reload
             pm2 restart app || pm2 start npm --name "app" -- run start
             sudo nginx -s reload
+            (crontab -l 2>/dev/null; echo "0 2 * * * cd /home/ubuntu/CI-CDs/my-app && /home/ubuntu/.nvm/versions/node/$(nvm current)/bin/npm run start") | crontab -
